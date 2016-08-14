@@ -9,7 +9,7 @@ angular
                 $scope.$watch('query', function (newValue, oldValue) {
                     var params = newValue ? {nameStartsWith: newValue} : {};
 
-                    Hero.list(params, function (response) {
+                    Hero.query(params, function (response) {
                         $scope.heros = response.data.results;
                     });
                 });

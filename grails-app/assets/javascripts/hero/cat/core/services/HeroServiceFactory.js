@@ -5,7 +5,7 @@ angular
     .factory('Hero', ['$resource',
         function ($resource) {
             return $resource('hero/v1/public/characters/:characterId', {}, {
-                list: {
+                query: {
                     metohd: 'GET'
                 }
             });
