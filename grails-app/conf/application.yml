@@ -112,9 +112,9 @@ grails:
 
 
 marvel:
-    domain:
+    domain: gateway.marvel.com
     #Replace with values from http://developer.marvel.com/documentation/authorization
-    publicKey: marvelPublicKey
-    privateKey: marvelPrivateKey
+    publicKey: publicKey
+    privateKey: privateKey
 
 
