@@ -9,7 +9,7 @@ class HeroCatException extends RuntimeException {
     private RestResponse restResponse
 
     public HeroCatException(RestResponse restResponse) {
-        super(restResponse.json.message)
+        super("${restResponse.json.status}")
         this.restResponse = restResponse
     }
 }

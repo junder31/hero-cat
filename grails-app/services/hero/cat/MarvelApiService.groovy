@@ -19,9 +19,10 @@ class MarvelApiService {
     private String privateKey;
 
     @Cacheable("marvelApiResponseCache")
-    RestResponse call(String location) {
-        log.info("Calling Marvel API with location: ${location}")
-        URL url = constructUrl(location)
+    RestResponse call(String path, String query) {
+        URL url = constructUrl(path, query)
+
+        log.info("Calling Marvel API with url: ${url}")
         RestResponse response = rest.get("${url}")
 
         if(response.status != HttpStatus.OK.value()) {
@@ -31,17 +32,7 @@ class MarvelApiService {
         }
     }
 
-    private URL constructUrl(String location) {
-        String path
-        String query
-
-        if(location.contains("?")) {
-            (path, query) = location.split("\\?")
-        } else {
-            path = location
-            query = ""
-        }
-
+    private URL constructUrl(String path, String query) {
         long ts = System.currentTimeMillis()
         String hash = "${ts}${privateKey}${publicKey}".encodeAsMD5()
         String auth = "ts=${ts}&apikey=${publicKey}&hash=${hash}"

@@ -83,13 +83,16 @@ dependencies {
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 }
 bower {
-    'angular'('1.4.x') {
+    'angular'('1.5.x') {
         source 'angular.js'
     }
-    'angular-resource'('1.4.x') {
+    'angular-route'('1.5.x') {
+        source 'angular-route.js' >> '/angular/'
+    }
+    'angular-resource'('1.5.x') {
         source 'angular-resource.js' >> '/angular/'
     }
-    'angular-mocks'('1.4.x') {
+    'angular-mocks'('1.5.x') {
         source 'angular-mocks.js' >> '/angular/'
     }
     'angular-bootstrap'('1.1.x') {
