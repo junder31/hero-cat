@@ -25,7 +25,7 @@ class MarvelApiService {
         log.info("Calling Marvel API with url: ${url}")
         RestResponse response = rest.get("${url}")
 
-        if(response.status != HttpStatus.OK.value()) {
+        if (response.status != HttpStatus.OK.value()) {
             throw new HeroCatException(response)
         } else {
             return response

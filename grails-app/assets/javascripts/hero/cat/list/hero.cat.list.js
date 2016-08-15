@@ -6,8 +6,8 @@
 //= require_tree templates
 //= require /angular/ui-bootstrap-tpls
 
-angular.module("hero.cat.list", [
-  "hero.cat.core",
-  "ui.bootstrap.dropdown",
-  "ui.bootstrap.collapse",
+angular.module('hero.cat.list', [
+    'hero.cat.core',
+    'ui.bootstrap.dropdown',
+    'ui.bootstrap.collapse',
 ]);

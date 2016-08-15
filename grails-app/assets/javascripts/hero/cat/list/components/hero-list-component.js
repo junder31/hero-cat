@@ -1,10 +1,10 @@
 //= wrapped
 
 angular
-    .module("hero.cat.list")
-    .component("heroList", {
+    .module('hero.cat.list')
+    .component('heroList', {
         templateUrl: 'static/templates/hero-list.html',
-        controller: ["$scope", "Hero",
+        controller: ['$scope', 'Hero',
             function HeroListController($scope, Hero) {
                 $scope.$watch('query', function (newValue, oldValue) {
                     var params = newValue ? {nameStartsWith: newValue} : {};

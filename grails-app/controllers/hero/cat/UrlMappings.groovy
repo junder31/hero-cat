@@ -5,7 +5,7 @@ class UrlMappings {
     static mappings = {
         "/hero/**"(controller: "hero", action: "proxy")
 
-        "/$controller/$action?/$id?(.$format)?"{
+        "/$controller/$action?/$id?(.$format)?" {
             constraints {
                 // apply constraints here
             }
